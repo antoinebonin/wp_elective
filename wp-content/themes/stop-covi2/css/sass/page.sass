@@ -1,0 +1,262 @@
+body:not(.home)
+  h1
+    font-size: 2rem
+    display: inline-block
+    position: relative
+    margin-bottom: 20px
+
+  .woocommerce
+    span.onsale
+      background-color: $secondary-color-dark !important
+
+    div.product
+      div.row
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+        @media only screen and (max-width: 768px)
+          -ms-flex-direction: column
+          flex-direction: column
+      div.summary
+        float: none
+      p.price, span.price
+        color: $secondary-color-dark
+      div.informations-area, div.description-area
+        margin: 15px 0
+      table.woocommerce-product-attributes
+        tr:nth-child(even)
+          background-color: #fbfbfb
+        tr:nth-child(odd)
+          background-color: #eaeaea
+        td.woocommerce-product-attributes-item__value
+          vertical-align: middle
+      div.images
+        .flex-control-thumbs
+          li
+            padding: 15px
+      .quantity
+        .qty
+          height: 36px
+
+    #respond input#submit.alt, a.button.alt, button.button.alt, input.button.alt
+      background-color: $primary-color
+      -webkit-transition: .3s ease
+      -o-transition: .3s ease
+      transition: .3s ease
+      &:hover
+        background-color: $primary-color-dark
+
+    .woocommerce-MyAccount-navigation
+      ul
+        @media only screen and (max-width: 790px)
+          margin-bottom: 15px
+        li.woocommerce-MyAccount-navigation-link
+          position: relative
+          background-color: $primary-color
+          -webkit-transition: .3s ease
+          -o-transition: .3s ease
+          transition: .3s ease
+          height: 35px
+          &:not(:last-child)
+            border-bottom: 1px solid $primary-color-light
+          a
+            color: #444444
+            text-decoration: none
+          &:hover
+            background-color: $primary-color-dark
+          &.is-active
+            background-color: $primary-color-dark
+            a
+              font-weight: 700
+            &::after
+              content: ''
+              position: absolute
+              top: calc(50% - 8px)
+              right: 8px
+              background-color: $primary-color
+              -webkit-mask-image: url(../img/arrow.png)
+              mask-image: url(../img/arrow.png)
+              -webkit-mask-repeat: no-repeat
+              mask-repeat: no-repeat
+              -webkit-mask-size: contain
+              mask-size: contain
+              width: 16px
+              height: 16px
+          a
+            position: absolute
+            line-height: 30px
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            padding: 5px 10px
+
+    .woocommerce-form-login
+      .woocommerce-form-login__rememberme
+        line-height: 36px
+        input[type=checkbox]
+          vertical-align: inherit
+
+    ul.page-numbers
+      li
+        a
+          color: black
+
+  &.woocommerce-cart
+    table.cart
+      td.product-name
+        a
+          color: black
+          text-decoration: none
+          font-weight: 700
+          text-decoration: none
+          background-size: 0
+          background-repeat: no-repeat
+          background-image: -o-linear-gradient(transparent calc(65% - 5px), $primary-color-dark 5px)
+          background-image: linear-gradient(transparent calc(65% - 5px), $primary-color-dark 5px)
+          -webkit-transition: 0.5s ease
+          -o-transition: 0.5s ease
+          transition: 0.5s ease
+          font-family: 'Josefin Sans', sans-serif
+          &:hover
+            background-size: 100%
+      td.actions
+        .coupon
+          .input-text
+            height: 35px
+            line-height: 35px
+
+  &.page-id-23
+    form.wpcf7-form
+      margin: 40px auto
+      width: 70%
+      @media only screen and (max-width: 600px)
+        width: 100%
+
+      div.line
+        position: relative
+        margin-top: 20px
+        label
+          position: absolute
+          background-color: white
+          top: 8px
+          left: 10px
+          z-index: 10
+          padding: 0 4px
+          font-weight: 300
+        input[type=text], input[type=email]
+          width: 100%
+          height: calc(30px + 10px)
+          line-height: 30px
+          padding: 5px 10px
+        textarea
+          max-width: 100%
+          min-width: 100%
+          min-height: 75px
+          height: 90px
+          padding: 15px 10px
+
+      div.line-checkbox
+        margin: 20px 0
+        position: relative
+        span.wpcf7-list-item
+          margin: 0
+        label
+          div.checkbox
+            position: relative
+            span.wpcf7-form-control-wrap.acceptance-rgpd
+              display: none
+            p#phrase-checkbox
+              position: relative
+              display: inline-block
+              margin-left: 35px
+              width: calc(100% - 35px)
+              font-weight: 300
+              &::before
+                content: ''
+                position: absolute
+                top: 4px
+                left: -35px
+                width: 18px
+                height: 18px
+                z-index: 0
+                border: 2px solid #5a5a5a
+                border-radius: 1px
+                margin-top: 3px
+                -webkit-transition: .2s
+                transition: .2s
+              &.checked
+                &::before
+                  top: -4px
+                  left: -35px
+                  width: 12px
+                  height: 22px
+                  border-top: 2px solid transparent
+                  border-left: 2px solid transparent
+                  border-right: 2px solid #26a69a
+                  border-bottom: 2px solid #26a69a
+                  -webkit-transform: rotate(40deg)
+                  transform: rotate(40deg)
+                  -webkit-backface-visibility: hidden
+                  backface-visibility: hidden
+                  -webkit-transform-origin: 100% 100%
+                  transform-origin: 100% 100%
+
+      input[type=submit]
+        margin-left: auto
+        margin-right: -20px
+        background-color: $primary-color
+        color: white
+        padding: 0 15px
+        height: 30px
+        line-height: 30px
+        border: none
+        -webkit-transition: .3s ease
+        -o-transition: .3s ease
+        transition: .3s ease
+        &:hover
+          background-color: $primary-color-dark
+        &:disabled
+          background-color: #f0f0f0
+          color: #6d6d6d
+
+      span.ajax-loader
+        position: relative
+        left: 20px
+        top: 8px
+
+    p.contact
+      margin: 30px 0
+      a
+        position: relative
+        color: black
+        font-weight: 700
+        text-decoration: none
+        background-size: 0
+        background-repeat: no-repeat
+        display: inline
+        background-image: -o-linear-gradient(transparent calc(65% - 5px), $primary-color-dark 5px)
+        background-image: linear-gradient(transparent calc(65% - 5px), $primary-color-dark 5px)
+        -webkit-transition: 0.5s ease
+        -o-transition: 0.5s ease
+        transition: 0.5s ease
+        &:hover
+          background-size: 100%
+
+  &.page-id-110, &.page-id-19, &.page-id-21, &.error404
+    section
+      h2
+        margin: 20px 0 0
+      h3
+        margin: 10px 0
+
+      a
+        color: black
+        font-weight: 700

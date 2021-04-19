@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Changa:wght@700|Josefin+Sans:300,400,700&display=swap')
+
+body
+  position: relative
+  width: 100%
+  min-height: 100vh
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+
+main
+  -webkit-box-flex: 1
+  -ms-flex-positive: 1
+  flex-grow: 1
+
+h1
+  font-family: 'Changa', sans-serif
+
+h2, h3, h4, h5, p, b, a, span, input, textarea, li, table, td, tr, th, button, h3, input, label, select, address
+  font-family: 'Josefin Sans', sans-serif
+
+#main
+  padding-top: 90px
+  transition: .3s ease all
+  min-height: 500px
+
+  @media only screen and (max-width: 790px)
+    padding-top: 50px
+
+  section
+    margin: 50px 0
+    overflow-x: hidden
+
+    @media only screen and (max-width: 790px)
+      margin: 0
+
+    article
+      width: 80%
+      max-width: 1200px
+      margin: 50px auto
+
+      @media only screen and (max-width: 790px)
+        width: 95%
+
+ul.product_list_widget, ul.products, ul.categories
+  margin-top: 30px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+  -ms-flex-direction: row
+  flex-direction: row
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+  li.product-view, li.categorie-view
+    width: calc(100% / 4 - 2 * 20px)
+    margin: 20px
+    &:last-child
+      margin-right: auto
+    @media only screen and (max-width: 790px)
+      width: calc(100% / 2 - 2 * 20px)
+    @media only screen and (max-width: 500px)
+      width: 100%
+      margin: 20px 0
+
+    a.woocommerce-LoopProduct-link
+      text-decoration: none
+
+    a.image, span.item-image
+      position: relative
+      display: inline-block
+      width: 100%
+      font-size: 0
+      margin-bottom: 15px
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        z-index: -1
+        width: 100%
+        height: 100%
+        background-color: transparent
+        transition: .3s ease
+      img
+        -o-object-fit: cover
+        object-fit: cover
+        -o-object-position: center
+        object-position: center
+        width: 100%
+        height: 300px
+        @media only screen and (max-width: 1200px) and (min-width: 790px)
+          height: 200px
+      .amount
+        position: absolute
+        top: 10px
+        right: -15px
+        background-color: $primary-color-dark
+        color: white
+        font-weight: 700
+        padding: 10px 15px
+        font-size: 1rem
+        -webkit-transition: 0.4s ease
+        -o-transition: 0.4s ease
+        transition: 0.4s ease
+      &.on-sale
+        .amount
+          background-color: $secondary-color-dark
+
+    a.title, span.item-title h2
+      font-weight: 700
+      color: black
+      text-decoration: none
+      background-image: -o-linear-gradient(transparent calc(65% - 5px), $primary-color-dark 5px)
+      background-image: linear-gradient(transparent calc(65% - 5px), $primary-color-dark 5px)
+      background-size: 0
+      background-repeat: no-repeat
+      display: inline
+      -webkit-transition: 0.5s ease
+      -o-transition: 0.5s ease
+      transition: 0.5s ease
+      font-family: 'Josefin Sans', sans-serif
+
+    a.title.on-sale, span.item-title.on-sale h2
+      background-image: -o-linear-gradient(transparent calc(65% - 5px), $secondary-color-dark 5px)
+      background-image: linear-gradient(transparent calc(65% - 5px), $secondary-color-dark 5px)
+
+    &:hover
+      a.image, span.item-image
+        &::before
+          background-color: $primary-color
+          bottom: -10px
+          left: -10px
+        &.on-sale
+          &::before
+            background-color: $secondary-color
+
+        .amount
+          right: -8px
+
+      a.title, span.item-title h2
+        background-size: 100%
+
+div.woocommerce-info, div.woocommerce-message, div.woocommerce-Message
+  font-family: 'Josefin Sans', sans-serif
+
+a.go-to-shop
+  color: black
+  font-weight: 700
+
+div.flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+// Bloc RGPD (Complianz)
+#cmplz-document
+  max-width: 100% !important
+.cc-window
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,.4)
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,.4)
+  -o-box-shadow: 0px 0px 10px 0px rgba(0,0,0,.4)
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,.4)
+.cmplz-subtitle
+  font-family: 'Josefin Sans', sans-serif
