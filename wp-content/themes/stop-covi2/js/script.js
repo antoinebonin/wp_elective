@@ -57,7 +57,7 @@ if (catalogue_btns.length == 2) {
         setTimeout(function(){
           header.classList.remove('on-top');
           main.classList.remove('on-top');
-        }, 500);
+        }, 300);
       } else {
         document.getElementsByTagName('body')[0].style.overflow = 'visible';
         document.getElementsByTagName('body')[0].style.height = '100%';
