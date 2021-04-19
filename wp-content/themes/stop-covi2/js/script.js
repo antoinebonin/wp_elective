@@ -3,7 +3,7 @@ var ticking = false;
 const header = document.getElementById('header');
 const main = document.getElementById('main');
 
-function faireQuelqueChose(position_scroll) {
+function eventOnScroll(position_scroll) {
   if (position_scroll <= 10) {
     header.classList.add('on-top');
     main.classList.add('on-top');
@@ -18,7 +18,7 @@ window.addEventListener('scroll', function(e) {
 
   if (!ticking) {
     window.requestAnimationFrame(function() {
-      faireQuelqueChose(derniere_position_de_scroll_connue);
+      eventOnScroll(derniere_position_de_scroll_connue);
       ticking = false;
     });
   }
@@ -54,6 +54,10 @@ if (catalogue_btns.length == 2) {
         document.getElementsByTagName('body')[0].style.height = '100vh';
         header.classList.remove('on-top');
         main.classList.remove('on-top');
+        setTimeout(function(){
+          header.classList.remove('on-top');
+          main.classList.remove('on-top');
+        }, 500);
       } else {
         document.getElementsByTagName('body')[0].style.overflow = 'visible';
         document.getElementsByTagName('body')[0].style.height = '100%';
