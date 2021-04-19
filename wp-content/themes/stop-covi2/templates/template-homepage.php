@@ -15,11 +15,11 @@
         <div class="texte">
           <?= $texte ?>
           <br />
-          <p><a href="<?= get_permalink(6) ?>">Visiter la boutique</a></p>
+          <p><a href="<?= get_permalink(7) ?>">Visiter la boutique</a></p>
         </div>
       </article>
     <?php endif; ?>
-    
+
     <article class="categories-list">
       <h2>Les catégories</h2>
       <?php get_all_categories(); ?>

@@ -10,7 +10,7 @@
             <?php if (in_array('post-0', get_post_class())): //si la page est une page d'archive ?>
               <?php if (strlen(get_the_content()) == 42): //si le contenu est null ?>
                 <p>Aucun contenu trouvé.</p>
-                <p><a class="go-to-shop" href="<?= get_permalink(6) ?>">Retourner à la boutique</a></p>
+                <p><a class="go-to-shop" href="<?= get_permalink(7) ?>">Retourner à la boutique</a></p>
               <?php else: ?>
                 <?php the_content(); ?>
               <?php endif; ?>

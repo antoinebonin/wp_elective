@@ -37,7 +37,7 @@
         <div class="content">
           <?php if (is_front_page()) : ?>
             <h1>Stop Covi2</h1>
-            <p><a href="<?= get_permalink(6) ?>">Visiter la boutique</a></p>
+            <p><a href="<?= get_permalink(7) ?>">Visiter la boutique</a></p>
           <?php endif; ?>
         </div>
       </div>
@@ -54,6 +54,6 @@
     <nav id="categories-menu" class="closed">
       <div class="content">
         <?php get_menu_categories(); ?>
-        <p><a href="<?= get_permalink(6) ?>">Visiter la boutique</a></p>
+        <p><a href="<?= get_permalink(7) ?>">Visiter la boutique</a></p>
       </div>
     </nav>
