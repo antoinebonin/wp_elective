@@ -59,20 +59,23 @@ body:not(.home)
           margin-bottom: 15px
         li.woocommerce-MyAccount-navigation-link
           position: relative
-          background-color: $primary-color
+          background-color: $primary-color-light
           -webkit-transition: .3s ease
           -o-transition: .3s ease
           transition: .3s ease
           height: 35px
+          color: white
           &:not(:last-child)
             border-bottom: 1px solid $primary-color-light
           a
             color: #444444
             text-decoration: none
           &:hover
-            background-color: $primary-color-dark
+            background-color: $primary-color
+            color: white
           &.is-active
-            background-color: $primary-color-dark
+            background-color: $primary-color
+            color: white
             a
               font-weight: 700
             &::after
