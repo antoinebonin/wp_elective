@@ -37,6 +37,7 @@
         <div class="content">
           <?php if (is_front_page()) : ?>
             <h1>Stop Covi2</h1>
+            <h2>Bas les masques</h2>
             <p><a href="<?= get_permalink(7) ?>">Visiter la boutique</a></p>
           <?php endif; ?>
         </div>
