@@ -5,6 +5,8 @@
     <?php if ( have_posts() ): ?>
       <?php while ( have_posts() ): the_post(); ?>
         <article <?php post_class(); ?>>
+          <?php if (is_woocommerce()) { woocommerce_breadcrumb(); } ?>
+
           <h1 class="post-title"><?php the_title(); ?></h1>
           <div class="post-content">
             <?php if (in_array('post-0', get_post_class())): //si la page est une page d'archive ?>
