@@ -1102,6 +1102,7 @@ body:not(.home).page-id-3 section a, body:not(.home).page-id-48 section a, body:
 
 .woocommerce-MyAccount-navigation-link--customer-logout {
   margin-top: 10px;
+  background-color: #acacac !important;
 }
 
 .dashboard {
@@ -1113,4 +1114,22 @@ body:not(.home).page-id-3 section a, body:not(.home).page-id-48 section a, body:
 .dashboard > li > a {
   width: 100%;
   margin: 5px 0 !important;
+}
+
+.u-columns > .woocommerce-Address {
+  width: 50% !important;
+  padding: 2%;
+}
+@media only screen and (max-width: 790px) {
+  .u-columns > .woocommerce-Address {
+    width: 100% !important;
+  }
+}
+.u-columns > .col-1 {
+  border-right: 2px solid black;
+}
+@media only screen and (max-width: 790px) {
+  .u-columns > .col-1 {
+    border: none;
+  }
 }
