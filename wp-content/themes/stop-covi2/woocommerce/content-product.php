@@ -26,7 +26,18 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_before_shop_loop_item' );
   ?>
 
-	<?php $on_sale = false; if ($product->get_sale_price()) { $on_sale = true; } ?>
+	<?php
+	$on_sale = false;
+	$variations = $product->get_children();
+	if ($variations) {
+		foreach ($variations as $sub_product){
+			$single_variation = new WC_Product_Variation($sub_product);
+			$on_sale = $single_variation->get_sale_price() ? true : $on_sale;
+		}
+	} else {
+		$on_sale = $product->get_sale_price() ? true : false;
+	}
+	?>
 
   <span class="item-image <?php if ($on_sale) { ?>on-sale<?php } ?>">
     <?php
