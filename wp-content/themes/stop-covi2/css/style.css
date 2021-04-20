@@ -1133,3 +1133,30 @@ body:not(.home).page-id-3 section a, body:not(.home).page-id-48 section a, body:
     border: none;
   }
 }
+
+p.line {
+  position: relative;
+  margin-top: 20px;
+}
+p.line label {
+  position: absolute;
+  background-color: white;
+  top: -8px;
+  left: 10px;
+  z-index: 10;
+  padding: 0 4px;
+  font-weight: 300;
+}
+p.line input[type=text], p.line input[type=email], p.line input[type=password] {
+  width: 100%;
+  height: calc(30px + 10px);
+  line-height: 30px;
+  padding: 5px 10px;
+}
+p.line textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 75px;
+  height: 90px;
+  padding: 15px 10px;
+}
