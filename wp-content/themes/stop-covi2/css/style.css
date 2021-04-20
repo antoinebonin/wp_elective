@@ -1099,3 +1099,18 @@ body:not(.home).page-id-3 section a, body:not(.home).page-id-48 section a, body:
   color: black;
   font-weight: 700;
 }
+
+.woocommerce-MyAccount-navigation-link--customer-logout {
+  margin-top: 10px;
+}
+
+.dashboard {
+  width: 100%;
+}
+.dashboard > li {
+  width: 100%;
+}
+.dashboard > li > a {
+  width: 100%;
+  margin: 5px 0 !important;
+}
