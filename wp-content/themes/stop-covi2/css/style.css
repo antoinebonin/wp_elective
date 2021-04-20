@@ -96,8 +96,12 @@ header#header nav#menu-classique div.on-left .aws-container input[type=search].a
   transition: 0.3s ease;
   font-size: 1rem;
 }
-header#header nav#menu-classique div.on-left .aws-container input[type=search].aws-search-field ::placeholder {
+header#header nav#menu-classique div.on-left .aws-container input[type=search].aws-search-field::-webkit-input-placeholder {
+  opacity: 1;
   color: white;
+}
+header#header nav#menu-classique div.on-left .aws-container input[type=search].aws-search-field::placeholder {
+  opacity: 1;
 }
 header#header nav#menu-classique div.on-left .aws-container input[type=search].aws-search-field:hover {
   -webkit-box-shadow: 1px 1px 5px 2px rgba(55, 55, 55, 0.2);
@@ -457,6 +461,10 @@ footer div.container {
 }
 footer div.container > div {
   width: calc(100% / 4 - 20px);
+  color: #b4b3ff;
+}
+footer div.container > div > b {
+  color: white;
 }
 footer div.container div.categories img {
   display: none;
@@ -518,6 +526,7 @@ footer div.credits {
   margin: 30px auto 0;
   text-align: center;
   font-weight: 300;
+  color: white;
 }
 @media only screen and (max-width: 790px) {
   footer {
