@@ -27,8 +27,8 @@ if ( ! is_a( $product, 'WC_Product' ) ) {
 		<a class="image on-sale" href="<?= esc_url( $product->get_permalink() ); ?>">
 			<?= $product->get_image(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<span class="woocommerce-Price-amount amount">
-				<del><i><?= number_format((float)$product->get_regular_price(), 2, ',', '') . "€"; ?></i></del>
-				<span> <?= number_format((float)$product->get_sale_price(), 2, ',', '') . "€"; ?></span>
+				<del><i><?= number_format((float)$product->get_regular_price(), 2, ',', '') . get_woocommerce_currency_symbol(); ?></i></del>
+				<span> <?= number_format((float)$product->get_sale_price(), 2, ',', '') . get_woocommerce_currency_symbol(); ?></span>
 			</span>
 		</a>
 	<?php else : ?>
