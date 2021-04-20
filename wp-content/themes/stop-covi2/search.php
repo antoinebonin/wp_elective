@@ -3,6 +3,8 @@
 <main id="main">
   <section>
     <article>
+      <?php if (is_woocommerce()) { woocommerce_breadcrumb(); } ?>
+      
 			<h1 class="page-title">Résultats de la recherche</h1>
       <?php if ( have_posts() ) : ?>
         <ul class="products">
