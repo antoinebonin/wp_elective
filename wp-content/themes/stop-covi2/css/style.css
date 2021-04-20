@@ -461,7 +461,6 @@ footer div.container {
 }
 footer div.container > div {
   width: calc(100% / 4 - 20px);
-  color: #b4b3ff;
 }
 footer div.container > div > b {
   color: white;
@@ -489,6 +488,7 @@ footer div.container a:not(.logo) {
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
+  color: #b4b3ff;
 }
 footer div.container a:not(.logo):hover {
   background-size: 100%;
