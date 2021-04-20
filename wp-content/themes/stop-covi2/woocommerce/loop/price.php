@@ -21,14 +21,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 ?>
-
-<?php $on_sale = false; if ($product->get_sale_price()) { $on_sale = true; } ?>
-
-<?php if ($on_sale) : ?>
+<?php
+$variations = $product->get_children();
+if ($variations) :
+	$max_price = 0;
+	$min_price = 10**15;
+	foreach ($variations as $sub_product){
+		$single_variation = new WC_Product_Variation($sub_product);
+		if ($single_variation->price > $max_price){
+			$max_price = $single_variation->price;
+		}
+		if ($single_variation->price < $min_price){
+			$min_price = $single_variation->price;
+		}
+	}
+	?>
 	<span class="woocommerce-Price-amount amount">
-		<del><i><?= number_format((float)$product->get_regular_price(), 2, ',', '') . get_woocommerce_currency_symbol(); ?></i></del>
-		<span> <?= number_format((float)$product->get_sale_price(), 2, ',', '') . get_woocommerce_currency_symbol(); ?></span>
+		<?= number_format((float)$min_price, 2, ',', '') . get_woocommerce_currency_symbol() . ' - ' . number_format((float)$max_price, 2, ',', '') . get_woocommerce_currency_symbol(); ?>
 	</span>
-<?php else : ?>
-	<?= $product->get_price_html(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<?php else:
+	$on_sale = false;
+	if ($product->get_sale_price()) { $on_sale = true; }
+	if ($on_sale) : ?>
+		<span class="woocommerce-Price-amount amount">
+			<del><i><?= number_format((float)$product->get_regular_price(), 2, ',', '') . get_woocommerce_currency_symbol(); ?></i></del>
+			<span> <?= number_format((float)$product->get_sale_price(), 2, ',', '') . get_woocommerce_currency_symbol(); ?></span>
+		</span>
+	<?php else : ?>
+		<?= $product->get_price_html(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+	<?php endif; ?>
 <?php endif; ?>
