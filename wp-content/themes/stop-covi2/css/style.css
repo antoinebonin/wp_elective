@@ -1160,3 +1160,11 @@ p.line textarea {
   height: 90px;
   padding: 15px 10px;
 }
+
+fieldset h2 {
+  margin-top: 25px;
+}
+
+button.save {
+  margin-top: 15px !important;
+}
