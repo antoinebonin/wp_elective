@@ -591,6 +591,10 @@ h2, h3, h4, h5, p, b, a, span, input, textarea, li, table, td, tr, th, button, h
   }
 }
 
+nav.woocommerce-breadcrumb {
+  font-family: "Josefin Sans", sans-serif;
+}
+
 ul.product_list_widget, ul.products, ul.categories {
   margin-top: 30px;
   display: -webkit-box;
