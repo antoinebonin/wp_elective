@@ -822,7 +822,14 @@ body.home .colonne .col {
   width: calc(100% / 3);
   text-align: center;
 }
-body.home .colonne .col h4 {
+body.home .colonne .col img.icon {
+  width: 20%;
+  height: auto;
+}
+body.home .colonne .col .content {
+  width: 80%;
+}
+body.home .colonne .col .content h4 {
   margin: 10px 0;
 }
 @media only screen and (max-width: 790px) {

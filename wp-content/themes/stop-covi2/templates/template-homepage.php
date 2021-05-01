@@ -24,16 +24,28 @@
     if ($colonne) :
       $col1 = $colonne['colonne1'];
       $col2 = $colonne['colonne2'];
-      $col3 = $colonne['colonne3']; ?>
+      $col3 = $colonne['colonne3'];
+      $icon1 = $colonne['icon1'];
+      $icon2 = $colonne['icon2'];
+      $icon3 = $colonne['icon3'];  ?>
     <div class="colonne">
       <div class="col">
-        <?= $col1 ?>
+          <img class="icon" src="<?= $icon1['url'] ?>" alt="<?= $icon1['alt'] ?>" />
+          <div class="content">
+            <?= $col1 ?>
+          </div>
       </div>
       <div class="col">
-        <?= $col2 ?>
+          <img class="icon" src="<?= $icon2['url'] ?>" alt="<?= $icon2['alt'] ?>" />
+          <div class="content">
+            <?= $col2 ?>
+          </div>
       </div>
       <div class="col">
-        <?= $col3 ?>
+          <img class="icon" src="<?= $icon3['url'] ?>" alt="<?= $icon3['alt'] ?>" />
+          <div class="content">
+            <?= $col3 ?>
+          </div>
       </div>
     </div>
     <?php endif; ?>
