@@ -18,6 +18,26 @@
       </article>
     <?php endif; ?>
 
+
+    <?php
+    $colonne = get_field('colonne');
+    if ($colonne) :
+      $col1 = $colonne['colonne1'];
+      $col2 = $colonne['colonne2'];
+      $col3 = $colonne['colonne3']; ?>
+    <div class="colonne">
+      <div class="col">
+        <?= $col1 ?>
+      </div>
+      <div class="col">
+        <?= $col2 ?>
+      </div>
+      <div class="col">
+        <?= $col3 ?>
+      </div>
+    </div>
+    <?php endif; ?>
+
     <article class="categories-list">
       <h2>Les catégories</h2>
       <?php get_all_categories(); ?>
