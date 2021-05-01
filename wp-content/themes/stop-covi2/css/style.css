@@ -821,11 +821,6 @@ body.home .colonne .col {
   margin: 0;
   width: calc(100% / 3);
   text-align: center;
-  display: flex;
-}
-body.home .colonne .col img {
-  width: 20%;
-  height: auto;
 }
 body.home .colonne .col h4 {
   margin: 10px 0;
