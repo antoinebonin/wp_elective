@@ -823,13 +823,15 @@ body.home .colonne .col {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 body.home .colonne .col .icon {
   width: 20%;
 }
 body.home .colonne .col .icon img {
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin: auto;
 }
 body.home .colonne .col .content {
   width: 80%;
