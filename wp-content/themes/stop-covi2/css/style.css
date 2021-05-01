@@ -821,6 +821,8 @@ body.home .colonne .col {
   margin: 0;
   width: calc(100% / 3);
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 body.home .colonne .col img.icon {
   width: 20%;
