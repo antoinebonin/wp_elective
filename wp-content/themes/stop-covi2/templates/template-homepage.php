@@ -30,19 +30,25 @@
       $icon3 = $colonne['icon3'];  ?>
     <div class="colonne">
       <div class="col">
-          <img class="icon" src="<?= $icon1['url'] ?>" alt="<?= $icon1['alt'] ?>" />
+        <div class="icon">
+          <img src="<?= $icon1['url'] ?>" alt="<?= $icon1['alt'] ?>" />
+        </div>
           <div class="content">
             <?= $col1 ?>
           </div>
       </div>
       <div class="col">
-          <img class="icon" src="<?= $icon2['url'] ?>" alt="<?= $icon2['alt'] ?>" />
+        <div class="icon">
+          <img src="<?= $icon2['url'] ?>" alt="<?= $icon2['alt'] ?>" />
+        </div>
           <div class="content">
             <?= $col2 ?>
           </div>
       </div>
       <div class="col">
-          <img class="icon" src="<?= $icon3['url'] ?>" alt="<?= $icon3['alt'] ?>" />
+        <div class="icon">
+          <img src="<?= $icon3['url'] ?>" alt="<?= $icon3['alt'] ?>" />
+        </div>
           <div class="content">
             <?= $col3 ?>
           </div>

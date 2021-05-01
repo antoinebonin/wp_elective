@@ -824,8 +824,11 @@ body.home .colonne .col {
   display: flex;
   flex-wrap: wrap;
 }
-body.home .colonne .col img.icon {
+body.home .colonne .col .icon {
   width: 20%;
+}
+body.home .colonne .col .icon img {
+  width: 100%;
   height: auto;
 }
 body.home .colonne .col .content {
