@@ -5,57 +5,6 @@ body.home
   #main.on-top
     padding-top: 500px
 
-  article.presentation
-    display: -webkit-box
-    display: -ms-flexbox
-    display: flex
-    -webkit-box-orient: horizontal
-    -webkit-box-direction: normal
-    -ms-flex-direction: row
-    flex-direction: row
-    -webkit-box-pack: justify
-    -ms-flex-pack: justify
-    justify-content: space-between
-    -webkit-box-align: center
-    -ms-flex-align: center
-    align-items: center
-
-    @media only screen and (max-width: 790px)
-      -webkit-box-orient: vertical
-      -webkit-box-direction: reverse
-      -ms-flex-direction: column-reverse
-      flex-direction: column-reverse
-
-    div
-      width: 45%
-      @media only screen and (max-width: 790px)
-        width: 100%
-
-    div.image
-      @media only screen and (max-width: 790px)
-        margin-top: 30px
-      img
-        -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5)
-        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5)
-
-    div.texte
-      text-align: center
-      a
-        position: relative
-        font-weight: 700
-        color: black
-        text-decoration: none
-        background-size: 0
-        background-repeat: no-repeat
-        display: inline
-        background-image: -o-linear-gradient(transparent calc(65% - 5px), $primary-color-light 5px)
-        background-image: linear-gradient(transparent calc(65% - 5px), $primary-color-light 5px)
-        -webkit-transition: 0.5s ease
-        -o-transition: 0.5s ease
-        transition: 0.5s ease
-        &:hover
-          background-size: 100%
-
   article.last-products, article.best-products, article.categories-list
     h2
       position: relative

@@ -14,8 +14,6 @@
         </div>
         <div class="texte">
           <?= $texte ?>
-          <br />
-          <p><a href="<?= get_permalink(7) ?>">Visiter la boutique</a></p>
         </div>
       </article>
     <?php endif; ?>
