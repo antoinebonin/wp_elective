@@ -811,6 +811,7 @@ body.home article.last-products h2, body.home article.best-products h2, body.hom
   margin-bottom: 50px;
 }
 body.home .colonne {
+  margin: auto;
   width: 80%;
   max-width: 1200px;
   display: flex;
@@ -821,9 +822,17 @@ body.home .colonne .col {
   width: calc(100% / 3);
   text-align: center;
 }
+body.home .colonne .col img {
+  width: 20%;
+}
+body.home .colonne .col h4 {
+  width: 80%;
+  margin: 10px 0;
+}
 @media only screen and (max-width: 790px) {
   body.home .colonne .col {
     width: 100% !important;
+    margin-top: 25px;
   }
 }
 
