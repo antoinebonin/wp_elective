@@ -21,7 +21,9 @@
       </article>
     <?php endif; ?>
 
-    <?php the_content(); ?>
+    <article>
+      <?php the_content(); ?>
+    </article>
   </section>
 </main>
 
